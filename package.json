@@ -1,19 +1,20 @@
 {
-  "name": "api-commandee",
+  "name": "api-node",
   "version": "1.0.0",
-  "description": "API REST para o Commandee",
+  "description": "Exemplo de API REST usando node e typescript",
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "start": "rollup -c && node dist/index.js",
-    "build": "rollup -c",
+    "build": "rollup -c --configPlugin typescript",
+    "start": "npm run build && node dist/index.js",
     "dev": "nodemon",
     "format": "prettier --write \"**/*.{js,cjs,mjs,json,ts}\"",
-    "lint": "eslint \"**/*.{js,cjs,mjs,ts}\" --fix"
+    "lint": "eslint \"**/*.{js,cjs,mjs,ts}\" --fix",
+    "fix": "npm run format && npm run lint"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/eslint-parser": "^7.21.3",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
@@ -23,11 +24,13 @@
     "@types/express": "^4.17.17",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
+    "dotenv": "^16.0.3",
     "eslint": "^8.37.0",
     "nodemon": "^2.0.22",
     "prettier": "^2.8.7",
     "rollup": "^3.20.2",
     "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
     "tslib": "^2.5.0",
     "typescript": "^5.0.3"
   },

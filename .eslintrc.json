@@ -13,10 +13,11 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
+
   "overrides": [
     {
       "files": ["*.js", "*.cjs", "*.mjs"],
-      "parser": "@babel/eslint-parser",
+      "parser": "Espree",
       "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module",
@@ -26,7 +27,6 @@
   ],
   "rules": {
     "no-unused-vars": "error",
-    "no-console": "warn",
     "no-debugger": "warn",
     "no-alert": "error",
     "no-undef": "error",
@@ -42,12 +42,6 @@
     "camelcase": "error",
     "comma-dangle": ["error", "never"],
     "eqeqeq": "error",
-    "indent": ["error", 2],
-    "max-len": ["error", { "code": 80 }],
-    "quotes": ["error", "single"],
-    "semi": ["warn", "always"],
-    "object-curly-spacing": ["error", "always"],
-    "array-bracket-spacing": ["error", "never"],
     "arrow-spacing": ["error", { "before": true, "after": true }],
     "keyword-spacing": ["error", { "before": true, "after": true }]
   }
