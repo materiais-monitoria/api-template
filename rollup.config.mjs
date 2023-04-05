@@ -11,6 +11,6 @@ export default {
     format: 'cjs',
     sourcemap: true
   },
-  plugins: [ nodeResolve(), commonjs(), terser(), typescript(), json() ],
-  external: [ 'express' ]
+  plugins: [nodeResolve(), commonjs(), terser(), typescript(), json()],
+  external: ['express']
 };
