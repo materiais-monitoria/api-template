@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 
 import professores from './data/professores.json' assert { type: 'json' };
-import { connection } from './db';
+import connection from './db';
 import { port } from './env';
 
 const app = express();
