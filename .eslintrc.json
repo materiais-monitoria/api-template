@@ -17,12 +17,7 @@
   "overrides": [
     {
       "files": ["*.js", "*.cjs", "*.mjs"],
-      "parser": "Espree",
-      "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module",
-        "requireConfigFile": false
-      }
+      "parser": "espree"
     }
   ],
   "rules": {

@@ -6,14 +6,18 @@
   "type": "module",
   "scripts": {
     "build": "rollup -c --configPlugin typescript",
-    "start": "npm run build && node dist/index.js",
+    "launch": "node dist/index.js",
+    "start": "npm run build && npm run launch",
     "dev": "nodemon",
+    "preview": "ts-node src/index.ts",
     "format": "prettier --write \"**/*.{js,cjs,mjs,json,ts}\"",
-    "lint": "eslint \"**/*.{js,cjs,mjs,ts}\" --fix",
-    "fix": "npm run format && npm run lint"
+    "lint": "eslint \"**/*.{js,cjs,mjs,ts}\"",
+    "lint:fix": "eslint \"**/*.{js,cjs,mjs,ts}\" --fix",
+    "fix": "npm run format && npm run lint:fix",
+    "clear": "rm -rf dist"
   },
   "author": "",
-  "license": "ISC",
+  "license": "AGPL-3.0-or-later",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-json": "^6.0.0",

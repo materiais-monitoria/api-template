@@ -6,8 +6,9 @@
   "printWidth": 80,
   "tabWidth": 2,
   "useTabs": false,
-  "bracketSpacing": true,
+  "bracketSpacing": false,
   "jsxSingleQuote": false,
   "proseWrap": "preserve",
+  "quoteProps": "as-needed",
   "endOfLine": "lf"
 }
