@@ -1,5 +1,5 @@
 import mysql from 'mysql2/promise';
-import { db } from './env';
+import { db } from './env.js';
 
 let connection: mysql.Connection;
 try {
