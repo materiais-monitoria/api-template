@@ -1,9 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 
-import professores from './data/professores.json' assert { type: 'json' };
-import connection from './db';
-import { port } from './env';
+import connection from './database.js';
+import { port } from './env.js';
 
 const app = express();
 
@@ -16,10 +15,6 @@ app.use(
 
 app.get('/', (_, res) => {
   res.send('Hello world!');
-});
-
-app.get('/api/professores', (_, res) => {
-  res.send(professores.map((professor) => ({ nome: professor })));
 });
 
 app.get('api/echo/:text', (req, res) => {

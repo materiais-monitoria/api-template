@@ -3,8 +3,10 @@ config();
 
 export const port = Number(process.env.PORT || 3000);
 
-const ssl = process.env.DB_SSL === 'true' ?
-  { rejectUnauthorized: true } as const : undefined;
+const ssl =
+  process.env.DB_SSL === 'true'
+    ? ({ rejectUnauthorized: true } as const)
+    : undefined;
 
 export const db = {
   host: process.env.DB_HOST || 'localhost',
