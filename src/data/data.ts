@@ -1,5 +1,5 @@
 export const mika = {
-  nome: 'Mika',
+  nome: 'Mikaa',
   idade: 17,
   corPreferida: 'Azul',
   comidaPreferida: 'Pizza',
